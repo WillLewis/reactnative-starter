@@ -4,7 +4,7 @@ import { Text, StyleSheet, Platform } from "react-native";
 
 import colors from "../config/colors";
 
-function AppText(children) {
+function AppText({ children }) {
   return <Text style={styles.text}>{children}</Text>;
 }
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         fontSize: 20,
-        fontFamily: "Courier"
+        fontFamily: "Avenir"
       },
       android: {
         fontSize: 18,
