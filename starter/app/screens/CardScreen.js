@@ -3,12 +3,13 @@ import { View } from "react-native";
 
 import AppButton from "../components/AppButton";
 import Card from "../components/Card";
+import colors from "../config/colors";
 
 export default function CardScreen() {
   return (
     <View
       style={{
-        backgroundColor: "f8f4f4",
+        backgroundColor: colors.backgroundGrey,
         padding: 20,
         paddingTop: 100
       }}
