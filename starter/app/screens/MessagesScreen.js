@@ -22,7 +22,12 @@ const messages = [
 
 //alternative use const
 const renderItem = ({ item }) => (
-  <ListItem title={item.title} subTitle={item.description} image={item.image} />
+  <ListItem
+    title={item.title}
+    subTitle={item.description}
+    image={item.image}
+    onPress={() => console.log("Message selected", item)}
+  />
 );
 
 function MessagesScreen(props) {

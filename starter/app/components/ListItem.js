@@ -3,7 +3,7 @@ import { Pressable, View, Image, StyleSheet } from "react-native";
 import AppText from "./AppText";
 import colors from "../config/colors";
 
-function ListItem({ title, subTitle, image }) {
+function ListItem({ title, subTitle, image, onPress }) {
   return (
     <Pressable
       style={({ pressed }) => [
@@ -11,7 +11,7 @@ function ListItem({ title, subTitle, image }) {
           backgroundColor: pressed ? colors.lightGrey : colors.white
         }
       ]}
-      onPress={() => console.log()}
+      onPress={onPress}
     >
       <View style={styles.container}>
         <Image style={styles.image} source={image}></Image>
