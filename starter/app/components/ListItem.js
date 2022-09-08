@@ -1,17 +1,26 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { Pressable, View, Image, StyleSheet } from "react-native";
 import AppText from "./AppText";
 import colors from "../config/colors";
 
 function ListItem({ title, subTitle, image }) {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image}></Image>
-      <View style={styles.textContainer}>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+    <Pressable
+      style={({ pressed }) => [
+        {
+          backgroundColor: pressed ? colors.lightGrey : colors.white
+        }
+      ]}
+      onPress={() => console.log()}
+    >
+      <View style={styles.container}>
+        <Image style={styles.image} source={image}></Image>
+        <View style={styles.textContainer}>
+          <AppText style={styles.title}>{title}</AppText>
+          <AppText style={styles.subTitle}>{subTitle}</AppText>
+        </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
